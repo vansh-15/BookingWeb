@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Buses | TripEase</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="bus.css">
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="header">
+    <div class="logo">TripEase</div>
+    <nav class="nav">
+        <a href="index.html">Home</a>
+        <a class="active">Buses</a>
+        <a href="offers.html">Offers</a>
+        <a href="support.html">Support</a>
+        <a href="login.html" class="login-btn">Login / Signup</a>
+    </nav>
+</header>
+
+<!-- HERO -->
+<section class="bus-hero">
+    <h1>Book Bus Tickets</h1>
+    <p>AC • Sleeper • Volvo • Safe & Comfortable</p>
+</section>
+
+<!-- SEARCH BAR -->
+<section class="bus-search">
+    <form class="search-bar">
+        <div class="search-field">
+            <span>From</span>
+            <h3>Delhi</h3>
+            <input type="text" name="fromCity" class="real-input">
+        </div>
+
+        <div class="search-field">
+            <span>To</span>
+            <h3>Jaipur</h3>
+            <input type="text" name="toCity" class="real-input">
+        </div>
+
+        <div class="search-field">
+            <span>Date</span>
+            <h3>24 Dec</h3>
+            <input type="date" name="journeyDate" class="real-input">
+        </div>
+
+        <button class="search-btn">Search</button>
+    </form>
+</section>
+
+<!-- RESULTS HEADER -->
+<section class="results-header">
+    <h2>Delhi → Jaipur</h2>
+    <p>20 buses found</p>
+</section>
+
+<!-- RESULTS -->
+<main class="results">
+
+    <div class="bus-card">
+        <div class="bus-info">
+            <h3>VRL Travels</h3>
+            <span class="tag">AC Sleeper</span>
+            <small>Live Tracking • Charging Point</small>
+        </div>
+
+        <div class="bus-timing">
+            <strong>22:30 → 06:00</strong>
+            <small>7h 30m • Overnight</small>
+        </div>
+
+        <div class="price-box">
+            <span class="price">₹1,299</span>
+            <button>Select Seat</button>
+        </div>
+    </div>
+
+    <div class="bus-card">
+        <div class="bus-info">
+            <h3>Rajasthan Roadways</h3>
+            <span class="tag">Non-AC Seater</span>
+            <small>Govt Certified</small>
+        </div>
+
+        <div class="bus-timing">
+            <strong>18:00 → 23:45</strong>
+            <small>5h 45m</small>
+        </div>
+
+        <div class="price-box">
+            <span class="price">₹699</span>
+            <button>Select Seat</button>
+        </div>
+    </div>
+
+</main>
+
+<footer class="footer">© 2025 TripEase</footer>
+
+</body>
+</html>

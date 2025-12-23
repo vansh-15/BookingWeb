@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>TripEase | Flights, Hotels, Trains, Cabs</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+
+<!-- ================= HEADER ================= -->
+<header class="header">
+    <div class="logo">TripEase</div>
+
+    <!-- Global navigation (NOT booking navigation) -->
+    <nav class="nav">
+        <a href="javascript:void(0)" class="active">Book</a>
+        <a href="offers.html">Offers</a>
+        <a href="support.html">Support</a>
+        <a href="login.html" class="login-btn">Login / Signup</a>
+    </nav>
+</header>
+
+<!-- ================= HERO / BOOKING ================= -->
+<main class="banner">
+
+    <section class="booking-card">
+
+        <!-- ================= BOOKING TABS (PAGE NAVIGATION) ================= -->
+        <div class="tabs">
+            <a href="index.html" class="tab active">Flights</a>
+            <a href="hotel.html" class="tab">Hotels</a>
+            <a href="holidays.html" class="tab">Holidays</a>
+            <a href="bus.html" class="tab">Buses</a>
+            <a href="train.html" class="tab">Trains</a>
+            <a href="cab.html" class="tab">Cabs</a>
+        </div>
+
+        <!-- ================= TRIP TYPE ================= -->
+        <div class="trip-type">
+            <label><input type="radio" name="tripType" value="ONE_WAY" checked> One Way</label>
+            <label><input type="radio" name="tripType" value="ROUND_TRIP"> Round Trip</label>
+            <label><input type="radio" name="tripType" value="MULTI_CITY"> Multi City</label>
+        </div>
+
+        <!-- ================= SEARCH FORM ================= -->
+        <form class="form-row" action="/api/flights/search" method="GET">
+
+            <div class="field">
+                <span>Departure From</span>
+                <h2>New Delhi</h2>
+                <small>DEL, Indira Gandhi Intl</small>
+                <input type="text" name="fromCity" class="real-input" value="New Delhi" required>
+            </div>
+
+            <div class="field">
+                <span>Going To</span>
+                <h2>Mumbai</h2>
+                <small>BOM, Chhatrapati Shivaji Intl</small>
+                <input type="text" name="toCity" class="real-input" value="Mumbai" required>
+            </div>
+
+            <div class="field">
+                <span>Departure Date</span>
+                <h2>23 Dec'25</h2>
+                <small>Tuesday</small>
+                <input type="date" name="departureDate" class="real-input" required>
+            </div>
+
+            <div class="field">
+                <span>Travellers & Class</span>
+                <h2>1 Traveller</h2>
+                <small>Economy</small>
+                <select name="travellers" class="real-input">
+                    <option value="1_ECONOMY">1 Traveller • Economy</option>
+                    <option value="2_ECONOMY">2 Travellers • Economy</option>
+                    <option value="1_BUSINESS">1 Traveller • Business</option>
+                </select>
+            </div>
+
+            <button type="submit" class="search-btn">Search</button>
+        </form>
+
+        <!-- ================= FARE OPTIONS ================= -->
+        <div class="fare-options">
+            <label><input type="radio" name="fareType" checked> Regular</label>
+            <label><input type="radio" name="fareType"> Student</label>
+            <label><input type="radio" name="fareType"> Armed Forces</label>
+            <label><input type="radio" name="fareType"> Senior Citizen</label>
+            <label><input type="checkbox" name="nonStop"> Non-Stop Flights</label>
+        </div>
+
+    </section>
+</main>
+
+<!-- ================= QUICK LINKS ================= -->
+<section class="quick-links">
+    <div class="quick-card">Check Flight Cancellations →</div>
+    <div class="quick-card">Claim Refund for Cancelled Flights →</div>
+</section>
+
+<!-- ================= OFFERS ================= -->
+<section class="offers">
+    <h2>Special Offers</h2>
+
+    <div class="offer-tabs">
+        <span class="active">All</span>
+        <span>Flights</span>
+        <span>Hotels</span>
+        <span>Holidays</span>
+        <span>Buses</span>
+    </div>
+
+    <div class="offer-cards">
+        <div class="offer-card">
+            <h3>Up to ₹15,000 OFF</h3>
+            <p>On Domestic Flights</p>
+            <span class="offer-code">AMEXFEST</span>
+        </div>
+
+        <div class="offer-card">
+            <h3>Up to ₹17,500 OFF</h3>
+            <p>On Credit Card EMI</p>
+            <span class="offer-code">AMEXEMI</span>
+        </div>
+
+        <div class="offer-card">
+            <h3>Up to ₹2,400 OFF</h3>
+            <p>RBL Bank Credit Cards</p>
+            <span class="offer-code">YATRARBL</span>
+        </div>
+    </div>
+
+    <a href="#" class="view-all">View all offers →</a>
+</section>
+
+<!-- ================= RECOMMENDED HOTELS ================= -->
+<section class="recommended">
+    <h2>Recommended Hotels</h2>
+
+    <div class="hotel-cards">
+        <div class="hotel-card">
+            <h3>The Chancery Pavilion</h3>
+            <p>Bangalore</p>
+            <span class="price">₹5,250</span>
+        </div>
+
+        <div class="hotel-card">
+            <h3>Pride Plaza Hotel</h3>
+            <p>Kolkata</p>
+            <span class="price">₹5,709</span>
+        </div>
+
+        <div class="hotel-card">
+            <h3>Holiday Inn</h3>
+            <p>Chennai</p>
+            <span class="price">₹6,299</span>
+        </div>
+    </div>
+</section>
+
+<!-- ================= DESTINATIONS ================= -->
+<section class="destinations">
+    <h2>Flights to Popular Domestic Destinations</h2>
+
+    <div class="destination-cards">
+        <div class="destination-card">Mumbai <span>₹9,401</span></div>
+        <div class="destination-card">Bangalore <span>₹11,198</span></div>
+        <div class="destination-card">Pune <span>₹9,998</span></div>
+        <div class="destination-card">Kolkata <span>₹7,997</span></div>
+        <div class="destination-card">Hyderabad <span>₹8,199</span></div>
+    </div>
+
+    <a href="#" class="view-all">See all locations →</a>
+</section>
+
+<!-- ================= SERVICES ================= -->
+<section class="services">
+    <h2>Other Services</h2>
+
+    <div class="service-cards">
+        <div class="service-card">Adventure</div>
+        <div class="service-card">MICE</div>
+        <div class="service-card">Cruise</div>
+        <div class="service-card">Villas & Stays</div>
+        <div class="service-card">Luxury Trains</div>
+    </div>
+</section>
+
+<!-- ================= WHY US ================= -->
+<section class="why-us">
+    <h2>Why TripEase?</h2>
+
+    <div class="why-cards">
+        <div class="why-card">
+            <h3>Exclusive Deals</h3>
+            <p>Best prices on flights and hotels.</p>
+        </div>
+
+        <div class="why-card">
+            <h3>Secure Bookings</h3>
+            <p>Trusted and protected payments.</p>
+        </div>
+
+        <div class="why-card">
+            <h3>Options for Every Budget</h3>
+            <p>From budget to luxury travel.</p>
+        </div>
+    </div>
+</section>
+
+<!-- ================= FOOTER ================= -->
+<footer class="footer">
+    <p>© 2025 TripEase. All rights reserved.</p>
+</footer>
+
+</body>
+</html>

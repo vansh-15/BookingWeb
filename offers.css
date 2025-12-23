@@ -1,0 +1,199 @@
+/* ===============================
+   DESIGN SYSTEM
+================================ */
+:root {
+    --primary: #00224f;
+    --primary-soft: #e7f0ff;
+    --accent: #0071c2;
+
+    --bg: #f5f7fa;
+    --card: #ffffff;
+
+    --text-main: #1f2937;
+    --text-muted: #6b7280;
+
+    --radius-sm: 8px;
+    --radius-md: 12px;
+    --radius-lg: 18px;
+
+    --shadow-sm: 0 4px 14px rgba(0,0,0,0.06);
+    --shadow-md: 0 14px 36px rgba(0,0,0,0.1);
+
+    --container: 1140px;
+    --header-height: 72px;
+}
+
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: system-ui, -apple-system, Segoe UI, sans-serif;
+}
+
+body {
+    background: var(--bg);
+    color: var(--text-main);
+    line-height: 1.6;
+}
+
+/* HEADER */
+.header {
+    height: var(--header-height);
+    background: var(--primary);
+    padding: 0 6%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.25);
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: 800;
+    color: white;
+}
+
+.nav a {
+    margin-left: 24px;
+    font-weight: 600;
+    color: rgba(255,255,255,0.9);
+    text-decoration: none;
+}
+
+.nav a.active {
+    color: #ffffff;
+    text-decoration: underline;
+    text-underline-offset: 6px;
+}
+
+.login-btn {
+    background: #ffb703;
+    color: #00224f;
+    padding: 8px 16px;
+    border-radius: var(--radius-sm);
+    font-weight: 800;
+}
+
+/* HERO */
+.offers-hero {
+    background: linear-gradient(180deg, #003580 0%, #0051b3 100%);
+    padding: 48px 6% 64px;
+    color: white;
+    text-align: center;
+}
+
+.offers-hero h1 {
+    font-size: 34px;
+    font-weight: 900;
+}
+
+.offers-hero p {
+    margin-top: 8px;
+    font-size: 16px;
+    opacity: 0.9;
+}
+
+/* FILTERS */
+.offer-filters {
+    width: 92%;
+    max-width: var(--container);
+    margin: 40px auto 0;
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.chip {
+    padding: 8px 16px;
+    border-radius: 20px;
+    border: 1px solid #e5e7eb;
+    background: white;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.chip.active {
+    background: var(--primary-soft);
+    color: var(--primary);
+    border-color: transparent;
+}
+
+/* OFFERS GRID */
+.offers-grid {
+    width: 92%;
+    max-width: var(--container);
+    margin: 56px auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 24px;
+}
+
+/* OFFER CARD */
+.offer-card {
+    background: var(--card);
+    padding: 26px;
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-sm);
+    position: relative;
+}
+
+.offer-card h3 {
+    font-size: 20px;
+    font-weight: 900;
+    margin: 10px 0;
+}
+
+.offer-card p {
+    color: var(--text-muted);
+}
+
+.offer-card small {
+    display: block;
+    margin-top: 10px;
+    color: var(--text-muted);
+}
+
+/* BADGE */
+.offer-badge {
+    position: absolute;
+    top: 18px;
+    right: 18px;
+    background: var(--primary-soft);
+    color: var(--primary);
+    font-size: 11px;
+    font-weight: 800;
+    padding: 6px 10px;
+    border-radius: 20px;
+}
+
+/* OFFER CODE */
+.offer-code {
+    display: inline-block;
+    margin-top: 14px;
+    padding: 6px 12px;
+    background: #fff5f7;
+    color: #e11d48;
+    border-radius: var(--radius-sm);
+    font-weight: 800;
+}
+
+/* FOOTER */
+.footer {
+    background: #0a101a;
+    color: white;
+    text-align: center;
+    padding: 40px;
+    font-size: 14px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 600px) {
+    .nav {
+        display: none;
+    }
+
+    .offers-hero h1 {
+        font-size: 28px;
+    }
+}

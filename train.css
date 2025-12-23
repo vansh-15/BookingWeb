@@ -1,0 +1,317 @@
+/* ===============================
+   BASE / DESIGN SYSTEM
+================================ */
+:root {
+    --primary: #00224f;
+    --primary-soft: #e7f0ff;
+    --accent: #0071c2;
+
+    --bg: #f5f7fa;
+    --card: #ffffff;
+
+    --text-main: #1f2937;
+    --text-muted: #6b7280;
+
+    --radius-sm: 8px;
+    --radius-md: 12px;
+    --radius-lg: 18px;
+
+    --shadow-sm: 0 4px 14px rgba(0,0,0,0.06);
+    --shadow-md: 0 14px 36px rgba(0,0,0,0.1);
+
+    --container: 1140px;
+    --header-height: 72px;
+}
+
+/* ===============================
+   RESET
+================================ */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: system-ui, -apple-system, Segoe UI, sans-serif;
+}
+
+body {
+    background: var(--bg);
+    color: var(--text-main);
+    line-height: 1.6;
+}
+
+/* ===============================
+   HEADER
+================================ */
+.header {
+    height: var(--header-height);
+    background: var(--primary);
+    padding: 0 6%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.25);
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: 800;
+    color: white;
+}
+
+.nav a {
+    margin-left: 24px;
+    font-weight: 600;
+    color: rgba(255,255,255,0.9);
+    text-decoration: none;
+}
+
+.nav a.active {
+    color: #ffffff;
+    text-decoration: underline;
+    text-underline-offset: 6px;
+}
+
+.login-btn {
+    background: #ffb700; /* booking-style accent */
+    color: #00224f;
+    padding: 8px 18px;
+    border-radius: var(--radius-sm);
+    font-weight: 800;
+    text-decoration: none;
+}
+
+.login-btn:hover {
+    background: #ffcc33;
+}
+
+/* ===============================
+   HERO (COMPACT)
+================================ */
+.train-hero {
+    background: linear-gradient(180deg, #003580 0%, #0051b3 100%);
+    padding: 48px 6% 64px;
+    color: white;
+}
+
+.train-hero h1 {
+    font-size: 34px;
+    font-weight: 900;
+    margin-bottom: 6px;
+}
+
+.train-hero p {
+    font-size: 16px;
+    opacity: 0.9;
+}
+
+/* ===============================
+   SEARCH BAR
+================================ */
+.train-search {
+    margin-top: -36px;
+}
+
+.search-bar {
+    width: 92%;
+    max-width: var(--container);
+    margin: auto;
+    background: var(--card);
+    border-radius: var(--radius-lg);
+    display: grid;
+    grid-template-columns: repeat(3, 1fr) auto;
+    box-shadow: var(--shadow-md);
+    overflow: hidden;
+}
+
+.search-field {
+    padding: 18px 22px;
+    position: relative;
+}
+
+.search-field span {
+    font-size: 11px;
+    font-weight: 700;
+    color: var(--text-muted);
+    text-transform: uppercase;
+}
+
+.search-field h3 {
+    font-size: 18px;
+    margin-top: 6px;
+}
+
+/* Invisible real input */
+.real-input {
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.search-btn {
+    background: var(--accent);
+    color: white;
+    border: none;
+    padding: 0 36px;
+    font-size: 18px;
+    font-weight: 800;
+    cursor: pointer;
+}
+
+.search-btn:hover {
+    background: #005fa3;
+}
+
+/* ===============================
+   RESULTS HEADER
+================================ */
+.results-header {
+    width: 92%;
+    max-width: var(--container);
+    margin: 56px auto 24px;
+}
+
+.results-header h2 {
+    font-size: 24px;
+    font-weight: 800;
+}
+
+.results-header p {
+    color: var(--text-muted);
+    margin-top: 4px;
+}
+
+/* ===============================
+   RESULTS LIST
+================================ */
+.results {
+    width: 92%;
+    max-width: var(--container);
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+/* ===============================
+   TRAIN CARD
+================================ */
+.train-card {
+    background: var(--card);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-sm);
+    padding: 22px 24px;
+    display: grid;
+    grid-template-columns: 1.4fr 1fr 1.2fr;
+    gap: 16px;
+    align-items: center;
+}
+
+/* Info */
+.train-info h3 {
+    font-size: 18px;
+    font-weight: 800;
+}
+
+.train-info small {
+    display: block;
+    margin-top: 6px;
+    color: var(--text-muted);
+}
+
+.tag {
+    display: inline-block;
+    margin-top: 6px;
+    font-size: 12px;
+    font-weight: 700;
+    padding: 4px 10px;
+    border-radius: 20px;
+    background: var(--primary-soft);
+    color: var(--primary);
+}
+
+/* Timing */
+.train-timing strong {
+    font-size: 16px;
+}
+
+.train-timing small {
+    display: block;
+    margin-top: 4px;
+    color: var(--text-muted);
+}
+
+/* Classes */
+.train-classes {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: flex-end;
+}
+
+.train-classes span {
+    font-size: 13px;
+    font-weight: 700;
+    padding: 6px 10px;
+    border-radius: var(--radius-sm);
+    background: #f3f4f6;
+}
+
+.train-classes button {
+    background: var(--accent);
+    color: white;
+    border: none;
+    padding: 10px 14px;
+    border-radius: var(--radius-sm);
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.train-classes button:hover {
+    background: #005fa3;
+}
+
+/* ===============================
+   FOOTER
+================================ */
+.footer {
+    margin-top: 80px;
+    background: #0a101a;
+    color: white;
+    text-align: center;
+    padding: 40px;
+    font-size: 14px;
+}
+
+/* ===============================
+   RESPONSIVE
+================================ */
+@media (max-width: 900px) {
+    .search-bar {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .search-btn {
+        grid-column: span 2;
+        height: 56px;
+    }
+
+    .train-card {
+        grid-template-columns: 1fr;
+        text-align: left;
+    }
+
+    .train-classes {
+        justify-content: flex-start;
+    }
+}
+
+@media (max-width: 600px) {
+    .nav {
+        display: none;
+    }
+
+    .train-hero h1 {
+        font-size: 28px;
+    }
+}

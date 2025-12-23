@@ -1,0 +1,241 @@
+@import url('index.css');
+
+/* ===============================
+   HOLIDAY HERO – PREMIUM
+================================ */
+.holiday-hero {
+    background:
+        linear-gradient(
+            180deg,
+            rgba(0, 53, 128, 0.92) 0%,
+            rgba(0, 81, 179, 0.92) 100%
+        );
+    padding: 56px 6% 84px;
+    color: white;
+    text-align: center;
+}
+
+.holiday-hero h1 {
+    font-size: clamp(30px, 4vw, 40px);
+    font-weight: 900;
+    letter-spacing: -0.6px;
+}
+
+.holiday-hero p {
+    margin-top: 10px;
+    font-size: 16px;
+    opacity: 0.95;
+}
+
+/* ===============================
+   SEARCH BAR – FLOATING CARD
+================================ */
+.holiday-search {
+    width: 92%;
+    max-width: var(--container);
+    margin: -48px auto 40px;
+    position: relative;
+    z-index: 2;
+}
+
+.search-bar {
+    background: white;
+    padding: 26px;
+    border-radius: var(--radius-lg);
+    display: grid;
+    grid-template-columns: repeat(3, 1fr) auto;
+    align-items: center;
+    box-shadow: var(--shadow-md);
+}
+
+.search-field {
+    padding: 14px 18px;
+    border-right: 1px solid #edf2f7;
+}
+
+.search-field:last-child {
+    border-right: none;
+}
+
+.search-field span {
+    font-size: 11px;
+    font-weight: 800;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.6px;
+}
+
+.search-field h3 {
+    font-size: 18px;
+    font-weight: 800;
+    margin-top: 4px;
+}
+
+.real-input {
+    display: none;
+}
+
+.search-btn {
+    background: linear-gradient(135deg, #ff3366, #ff1744);
+    color: white;
+    border: none;
+    padding: 14px 36px;
+    font-size: 18px;
+    font-weight: 900;
+    cursor: pointer;
+    border-radius: var(--radius-md);
+    box-shadow: 0 12px 30px rgba(255,51,102,0.45);
+    transition: transform 0.2s ease;
+}
+
+.search-btn:hover {
+    transform: translateY(-2px);
+}
+
+/* ===============================
+   FILTERS – CHIP STYLE
+================================ */
+.holiday-filters {
+    width: 92%;
+    max-width: var(--container);
+    margin: 48px auto 24px;
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.chip {
+    padding: 8px 18px;
+    border-radius: 999px;
+    border: 1px solid #e5e7eb;
+    background: white;
+    font-weight: 700;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background 0.2s ease;
+}
+
+.chip.active {
+    background: var(--accent-blue-soft);
+    color: var(--primary-blue);
+    border-color: transparent;
+}
+
+/* ===============================
+   HOLIDAY RESULTS
+================================ */
+.holiday-results {
+    width: 92%;
+    max-width: var(--container);
+    margin: 40px auto 80px;
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+}
+
+/* ===============================
+   HOLIDAY CARD – STAR ELEMENT
+================================ */
+.holiday-card {
+    background: white;
+    border-radius: var(--radius-lg);
+    display: grid;
+    grid-template-columns: 180px 2.2fr 1fr;
+    gap: 24px;
+    padding: 24px;
+    box-shadow: var(--shadow-sm);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.holiday-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 18px 40px rgba(0,0,0,0.12);
+}
+
+/* IMAGE PLACEHOLDER */
+.holiday-img {
+    background:
+        linear-gradient(
+            135deg,
+            #dbeafe,
+            #bfdbfe
+        );
+    border-radius: var(--radius-md);
+}
+
+/* INFO */
+.holiday-info h3 {
+    font-size: 20px;
+    font-weight: 900;
+    letter-spacing: -0.3px;
+}
+
+.holiday-info p {
+    margin-top: 4px;
+    color: var(--text-muted);
+    font-size: 14px;
+}
+
+.tags {
+    display: inline-block;
+    margin-top: 8px;
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--primary-blue);
+    background: var(--accent-blue-soft);
+    padding: 4px 10px;
+    border-radius: 999px;
+}
+
+/* PRICE */
+.holiday-price {
+    text-align: right;
+}
+
+.price {
+    font-size: 24px;
+    font-weight: 900;
+    color: #111827;
+}
+
+.holiday-price small {
+    display: block;
+    color: var(--text-muted);
+    margin-top: -2px;
+}
+
+.holiday-price button {
+    margin-top: 14px;
+    background: var(--accent-red);
+    color: white;
+    border: none;
+    padding: 12px 22px;
+    border-radius: var(--radius-sm);
+    font-weight: 800;
+    cursor: pointer;
+    transition: background 0.2s ease;
+}
+
+.holiday-price button:hover {
+    background: #e62e5c;
+}
+
+/* ===============================
+   RESPONSIVE
+================================ */
+@media (max-width: 900px) {
+
+    .search-bar {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+
+    .holiday-card {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .holiday-price {
+        text-align: center;
+    }
+}

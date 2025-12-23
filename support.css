@@ -1,0 +1,229 @@
+/* ===============================
+   BASE / DESIGN SYSTEM
+================================ */
+:root {
+    --primary: #00224f;
+    --primary-soft: #e7f0ff;
+    --accent: #0071c2;
+
+    --bg: #f5f7fa;
+    --card: #ffffff;
+
+    --text-main: #1f2937;
+    --text-muted: #6b7280;
+
+    --radius-md: 12px;
+    --radius-lg: 18px;
+
+    --shadow-sm: 0 4px 14px rgba(0,0,0,0.06);
+    --shadow-md: 0 14px 36px rgba(0,0,0,0.1);
+
+    --container: 1140px;
+    --header-height: 72px;
+}
+
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: system-ui, -apple-system, Segoe UI, sans-serif;
+}
+
+body {
+    background: var(--bg);
+    color: var(--text-main);
+    line-height: 1.6;
+}
+
+/* HEADER */
+.header {
+    height: var(--header-height);
+    background: var(--primary);
+    padding: 0 6%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.25);
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: 800;
+    color: white;
+}
+
+.login-btn {
+    background: #ffb700; /* booking-style accent */
+    color: #00224f;
+    padding: 8px 18px;
+    border-radius: var(--radius-sm);
+    font-weight: 800;
+    text-decoration: none;
+}
+
+.login-btn:hover {
+    background: #ffcc33;
+}
+
+.nav a {
+    margin-left: 24px;
+    font-weight: 600;
+    color: rgba(255,255,255,0.9);
+    text-decoration: none;
+}
+
+.nav a.active {
+    color: #ffffff;
+    text-decoration: underline;
+    text-underline-offset: 6px;
+}
+
+/* HERO */
+.support-hero {
+    background: linear-gradient(180deg, #003580 0%, #0051b3 100%);
+    padding: 48px 6% 64px;
+    color: white;
+    text-align: center;
+}
+
+.support-hero h1 {
+    font-size: 34px;
+    font-weight: 900;
+}
+
+.support-hero p {
+    margin-top: 8px;
+    font-size: 16px;
+    opacity: 0.9;
+}
+
+/* SUPPORT OPTIONS */
+.support-options {
+    width: 92%;
+    max-width: var(--container);
+    margin: 64px auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 24px;
+}
+
+.support-card {
+    background: var(--card);
+    padding: 24px;
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-sm);
+}
+
+.support-card h3 {
+    font-size: 18px;
+    font-weight: 800;
+}
+
+.support-card p {
+    margin: 10px 0;
+    color: var(--text-muted);
+}
+
+.support-card a {
+    font-weight: 700;
+    color: var(--accent);
+    text-decoration: none;
+}
+
+/* CONTACT SUPPORT */
+.contact-support {
+    width: 92%;
+    max-width: var(--container);
+    margin: 80px auto;
+}
+
+.contact-support h2 {
+    font-size: 24px;
+    font-weight: 800;
+    margin-bottom: 24px;
+}
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 24px;
+}
+
+.contact-card {
+    background: var(--card);
+    padding: 24px;
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-sm);
+}
+
+.contact-card h3 {
+    font-size: 18px;
+    font-weight: 800;
+}
+
+.contact-card small {
+    color: var(--text-muted);
+}
+
+.contact-card button {
+    margin-top: 12px;
+    background: var(--accent);
+    color: white;
+    border: none;
+    padding: 10px 16px;
+    border-radius: var(--radius-md);
+    font-weight: 700;
+    cursor: pointer;
+}
+
+/* FAQ */
+.faq {
+    width: 92%;
+    max-width: var(--container);
+    margin: 80px auto;
+}
+
+.faq h2 {
+    font-size: 24px;
+    font-weight: 800;
+    margin-bottom: 24px;
+}
+
+.faq-item {
+    background: var(--card);
+    padding: 20px;
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-sm);
+    margin-bottom: 16px;
+}
+
+.faq-item h4 {
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.faq-item p {
+    margin-top: 8px;
+    color: var(--text-muted);
+}
+
+/* FOOTER */
+.footer {
+    background: #0a101a;
+    color: white;
+    text-align: center;
+    padding: 40px;
+    font-size: 14px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 600px) {
+    .nav {
+        display: none;
+    }
+
+    .support-hero h1 {
+        font-size: 28px;
+    }
+}
