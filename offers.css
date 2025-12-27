@@ -75,6 +75,28 @@ body {
     font-weight: 800;
 }
 
+/* ===============================
+   HAMBURGER
+================================ */
+.menu-toggle {
+    display: none;
+}
+
+.hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 6px;
+    cursor: pointer;
+}
+
+.hamburger span {
+    width: 26px;
+    height: 3px;
+    background: white;
+    border-radius: 2px;
+    transition: all 0.3s ease;
+}
+
 /* HERO */
 .offers-hero {
     background: linear-gradient(180deg, #003580 0%, #0051b3 100%);
@@ -187,10 +209,55 @@ body {
     font-size: 14px;
 }
 
-/* RESPONSIVE */
-@media (max-width: 600px) {
+/* ===============================
+   RESPONSIVE
+================================ */
+@media (max-width: 900px) {
+    .offers-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+
+    .hamburger {
+        display: flex;
+    }
+
     .nav {
-        display: none;
+        position: fixed;
+        top: var(--header-height);
+        left: 0;
+        width: 100%;
+        background: var(--primary);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        padding: 24px 0;
+        transform: translateY(-120%);
+        transition: transform 0.35s ease;
+        z-index: 999;
+    }
+
+    .menu-toggle:checked ~ .nav {
+        transform: translateY(0);
+    }
+
+    .menu-toggle:checked + .hamburger span:nth-child(1) {
+        transform: rotate(45deg) translate(6px, 6px);
+    }
+
+    .menu-toggle:checked + .hamburger span:nth-child(2) {
+        opacity: 0;
+    }
+
+    .menu-toggle:checked + .hamburger span:nth-child(3) {
+        transform: rotate(-45deg) translate(6px, -6px);
+    }
+
+    .offers-grid {
+        grid-template-columns: 1fr;
     }
 
     .offers-hero h1 {

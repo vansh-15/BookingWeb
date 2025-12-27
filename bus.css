@@ -40,6 +40,25 @@ body {
 /* ===============================
    HEADER
 ================================ */
+.menu-toggle {
+    display: none;
+}
+
+.hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 6px;
+    cursor: pointer;
+}
+
+.hamburger span {
+    width: 26px;
+    height: 3px;
+    background: white;
+    border-radius: 2px;
+    transition: all 0.3s ease;
+}
+
 .header {
     height: var(--header-height);
     background: var(--primary);
@@ -264,35 +283,87 @@ body {
     font-size: 14px;
 }
 
-/* ===============================
-   RESPONSIVE
-================================ */
-@media (max-width: 900px) {
-    .search-bar {
-        grid-template-columns: 1fr 1fr;
+@media (max-width: 768px) {
+
+    .hamburger {
+        display: flex;
     }
 
-    .search-btn {
-        grid-column: span 2;
-        height: 56px;
+    .nav {
+        position: fixed;
+        top: 72px;
+        left: 0;
+        width: 100%;
+        background: #00224f;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        padding: 24px 0;
+        gap: 20px;
+
+        transform: translateY(-120%);
+        transition: transform 0.35s ease;
+        z-index: 999;
     }
 
-    .bus-card {
-        grid-template-columns: 1fr;
-        text-align: left;
+    .nav a {
+        margin: 0;
+        font-size: 16px;
+        color: white;
     }
 
-    .price-box {
-        text-align: left;
+    .login-btn {
+        background: #ffb703;
+        color: #00224f;
+    }
+
+    /* OPEN MENU */
+    .menu-toggle:checked ~ .nav {
+        transform: translateY(0);
+    }
+
+    /* HAMBURGER → X */
+    .menu-toggle:checked + .hamburger span:nth-child(1) {
+        transform: rotate(45deg) translate(6px, 6px);
+    }
+
+    .menu-toggle:checked + .hamburger span:nth-child(2) {
+        opacity: 0;
+    }
+
+    .menu-toggle:checked + .hamburger span:nth-child(3) {
+        transform: rotate(-45deg) translate(6px, -6px);
     }
 }
 
-@media (max-width: 600px) {
-    .nav {
-        display: none;
+@media (max-width: 768px) {
+
+    .search-bar {
+        grid-template-columns: 1fr;
     }
 
-    .bus-hero h1 {
-        font-size: 28px;
+    .search-btn {
+        width: 100%;
+        padding: 16px;
+    }
+
+    .real-input {
+        width: 100%;
+        margin-top: 6px;
+    }
+}
+
+@media (max-width: 768px) {
+
+    .bus-card {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+    }
+
+    .price-box {
+        align-items: flex-start;
     }
 }
