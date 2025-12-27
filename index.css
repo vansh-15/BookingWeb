@@ -77,6 +77,27 @@ body {
     font-weight: 700;
 }
 
+/* HAMBURGER */
+.nav-toggle {
+    display: none;
+}
+
+.hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+}
+
+.hamburger span {
+    width: 26px;
+    height: 3px;
+    background: white;
+    border-radius: 2px;
+    transition: 0.3s;
+}
+
+
 /* HERO / BANNER */
 .banner {
     background:
@@ -425,5 +446,116 @@ h2 {
 
     section {
         margin: 72px auto;
+    }
+}
+/* RESPONSIVE BREAKPOINTS */
+
+/* ---------- Tablets ---------- */
+@media (max-width: 992px) {
+
+    .form-row {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .search-btn {
+        grid-column: span 2;
+        height: 56px;
+    }
+
+    .tabs {
+        overflow-x: auto;
+        white-space: nowrap;
+        scrollbar-width: none;
+    }
+
+    .tabs::-webkit-scrollbar {
+        display: none;
+    }
+}
+
+/* ---------- Mobile ---------- */
+@media (max-width: 600px) {
+
+    /* ===== HEADER ===== */
+    .header {
+        padding: 0 16px;
+    }
+
+    /* Show hamburger */
+    .hamburger {
+        display: flex;
+    }
+
+    /* Mobile nav menu */
+    .nav {
+        position: absolute;
+        top: var(--header-height);
+        left: 0;
+        width: 100%;
+        background: #00224f;
+
+        flex-direction: column;
+        align-items: center;
+        gap: 18px;
+
+        padding: 20px 0;
+
+        display: none;
+    }
+
+    /* Toggle nav ON */
+    .nav-toggle:checked ~ .nav {
+        display: flex;
+    }
+
+    .nav a {
+        margin: 0;
+        font-size: 16px;
+    }
+
+    /* ===== BOOKING CARD ===== */
+    .booking-card {
+        padding: 22px 18px;
+    }
+
+    .tabs {
+        gap: 8px;
+    }
+
+    .tab {
+        font-size: 13px;
+        padding: 6px 10px;
+    }
+
+    .trip-type {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .form-row {
+        grid-template-columns: 1fr;
+    }
+
+    .search-btn {
+        width: 100%;
+        height: 52px;
+        font-size: 16px;
+    }
+
+    /* ===== SECTIONS ===== */
+    .offer-cards,
+    .hotel-cards,
+    .destination-cards,
+    .service-cards,
+    .why-cards {
+        grid-template-columns: 1fr;
+    }
+
+    .destination-card {
+        height: 180px;
+    }
+
+    section {
+        margin: 56px auto;
     }
 }
