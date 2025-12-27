@@ -77,21 +77,26 @@ body {
     font-weight: 700;
 }
 
-/* ===============================
-   HERO / BANNER
-================================ */
+/* HERO / BANNER */
 .banner {
-    background: linear-gradient(
-        180deg,
-        #003580 0%,
-        #0051b3 100%
-    );
+    background:
+        /* linear-gradient(
+            rgba(0, 30, 80, 0.65),
+            rgba(227, 231, 238, 0.85)
+        ), */
+        url("images/background.jpg");  
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
     padding-top: calc(var(--header-height) + 60px);
     padding-bottom: 160px;
 }
 
+
 .login-btn {
-    background: #ffb700; /* booking-style accent */
+    background: #ffb700; 
     color: #00224f;
     padding: 8px 18px;
     border-radius: var(--radius-sm);
@@ -116,9 +121,7 @@ body {
 }
 
 
-/* ===============================
-   BOOKING CARD
-================================ */
+/* BOOKING CARD */
 .booking-card {
     width: 92%;
     max-width: var(--container);
@@ -160,9 +163,7 @@ body {
     margin-bottom: 18px;
 }
 
-/* ===============================
-   SEARCH FORM
-================================ */
+/* SEARCH FORM  */
 .form-row {
     display: grid;
     grid-template-columns: repeat(4, 1fr) auto;
@@ -229,9 +230,7 @@ body {
     font-size: 14px;
 }
 
-/* ===============================
-   SECTIONS
-================================ */
+/* SECTIONS */
 section {
     width: 92%;
     max-width: var(--container);
@@ -244,9 +243,7 @@ h2 {
     margin-bottom: 24px;
 }
 
-/* ===============================
-   QUICK LINKS
-================================ */
+/* QUICK LINKS */
 .quick-links {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
@@ -261,9 +258,7 @@ h2 {
     font-weight: 700;
 }
 
-/* ===============================
-   OFFERS / HOTELS / WHY
-================================ */
+/* OFFERS / HOTELS / WHY */
 .offer-cards,
 .hotel-cards,
 .destination-cards,
@@ -293,38 +288,108 @@ h2 {
     font-weight: 700;
 }
 
-/* ===============================
-   DESTINATIONS
-================================ */
+/* DESTINATIONS */
 .destination-card {
     height: 220px;
-    padding: 24px;
     border-radius: var(--radius-lg);
-    color: white;
+    padding: 24px;
+
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
-    background-image:
-        linear-gradient(180deg, rgba(0,0,0,0.1), rgba(0,0,0,0.85));
-}
 
-/* ===============================
-   SERVICES
-================================ */
-.service-card {
-    height: 180px;
-    border-radius: var(--radius-lg);
-    background: #111827;
     color: white;
-    padding: 24px;
     font-weight: 700;
-    display: flex;
-    align-items: flex-end;
+
+    background-size: cover;          /* IMPORTANT */
+    background-position: center;     /* IMPORTANT */
+    background-repeat: no-repeat;
+
+    position: relative;
+    overflow: hidden;
+
+    transition: transform 0.35s ease, box-shadow 0.35s ease;
 }
 
-/* ===============================
-   FOOTER
-================================ */
+.destination-card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        180deg,
+        rgba(0,0,0,0.1),
+        rgba(0,0,0,0.8)
+    );
+}
+
+.destination-card * {
+    position: relative;
+    z-index: 1;
+}
+
+/* Individual destinations */
+.destination-card.mumbai {
+    background-image: url("images/mumbai.jpg");
+}
+
+.destination-card.bangalore {
+    background-image: url("images/banglore.jpg");
+}
+
+.destination-card.pune {
+    background-image: url("images/pune.jpg");
+}
+
+.destination-card.kolkata {
+    background-image: url("images/kolkata.jpg");
+}
+
+.destination-card.hyderabad {
+    background-image: url("images/hyderabad.jpg");
+}
+/* SERVICES */
+.service-card {
+    height: 200px;
+    border-radius: var(--radius-lg);
+    padding: 24px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+
+    color: white;
+    font-weight: 700;
+
+    background-size: cover;         
+    background-position: center;
+    background-repeat: no-repeat;
+
+    position: relative;
+    overflow: hidden;
+
+    transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+.service-card.adventure {
+    background-image: url("images/adventure.jpg");
+}
+
+.service-card.mice {
+    background-image: url("images/mice.jpg");
+}
+
+.service-card.cruise {
+    background-image: url("images/cruise.jpg");
+}
+
+.service-card.villa {
+    background-image: url("images/villa.jpg");
+}
+
+.service-card.luxurytrain {
+    background-image: url("images/luxurytrains.jpg");
+}
+
+/* FOOTER */
 .footer {
     background: #0a101a;
     color: white;
@@ -333,9 +398,7 @@ h2 {
     font-size: 14px;
 }
 
-/* ===============================
-   RESPONSIVE
-================================ */
+/* RESPONSIVE */
 @media (max-width: 992px) {
     .form-row {
         grid-template-columns: 1fr 1fr;

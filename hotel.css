@@ -36,9 +36,7 @@ body {
     line-height: 1.6;
 }
 
-/* ===============================
-   HEADER
-================================ */
+/* HEADER */
 .header {
     height: var(--header-height);
     background: var(--primary);
@@ -77,9 +75,7 @@ body {
     text-underline-offset: 6px;
 }
 
-/* ===============================
-   HERO
-================================ */
+/* HERO */
 .hotel-hero {
     background: linear-gradient(
         180deg,
@@ -106,9 +102,7 @@ body {
     opacity: 0.9;
 }
 
-/* ===============================
-   SEARCH BAR
-================================ */
+/* SEARCH BAR */
 .hotel-search {
     margin-top: -60px;
 }
@@ -205,8 +199,31 @@ body {
 
 /* Image placeholder */
 .hotel-img {
-    background: linear-gradient(135deg, #c7d2fe, #e0e7ff);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    position: relative;
+    overflow: hidden;
 }
+.hotel-img::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        rgba(0,0,0,0.05),
+        rgba(0,0,0,0.35)
+    );
+}
+/* HOTEL IMAGES */
+.hotel-card.hotel1 .hotel-img {
+    background-image: url("images/hotel1.jpg");
+}
+
+.hotel-card.hotel2 .hotel-img {
+    background-image: url("images/expresshotel.jpg");
+}
+
 
 /* Info */
 .hotel-info {
