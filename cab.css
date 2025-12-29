@@ -84,9 +84,48 @@ body {
     background: #ffcc33;
 }
 
-/* ===============================
-   HERO (COMPACT)
-================================ */
+/* DATE INPUT – CAB SEARCH */
+
+.date-input {
+    width: 100%;
+    border: none;
+    background: transparent;
+
+    font-size: 18px;
+    font-weight: 800;
+    color: var(--text-main);
+
+    margin-top: 6px;
+    padding: 0;
+
+    cursor: pointer;
+}
+
+/* Remove default focus outline */
+.date-input:focus {
+    outline: none;
+}
+
+/* Align with other fields */
+.search-field {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* Hover consistency */
+.search-field:hover .date-input {
+    color: var(--primary);
+}
+
+/* Subtle calendar icon */
+.date-input::-webkit-calendar-picker-indicator {
+    opacity: 0.6;
+    cursor: pointer;
+}
+
+
+/* HERO (COMPACT) */
 .cab-hero {
     background: linear-gradient(180deg, #003580 0%, #0051b3 100%);
     padding: 48px 6% 64px;
@@ -104,9 +143,7 @@ body {
     opacity: 0.9;
 }
 
-/* ===============================
-   SEARCH BAR
-================================ */
+/* SEARCH BAR */
 .cab-search {
     margin-top: -36px;
 }
@@ -162,9 +199,7 @@ body {
     background: #005fa3;
 }
 
-/* ===============================
-   RESULTS HEADER
-================================ */
+/* RESULTS HEADER */
 .results-header {
     width: 92%;
     max-width: var(--container);
@@ -181,9 +216,7 @@ body {
     margin-top: 4px;
 }
 
-/* ===============================
-   RESULTS LIST
-================================ */
+/* RESULTS LIST */
 .results {
     width: 92%;
     max-width: var(--container);
@@ -193,9 +226,7 @@ body {
     gap: 24px;
 }
 
-/* ===============================
-   CAB CARD
-================================ */
+/* CAB CARD */
 .cab-card {
     background: var(--card);
     border-radius: var(--radius-lg);
@@ -267,9 +298,7 @@ body {
     background: #005fa3;
 }
 
-/* ===============================
-   FOOTER
-================================ */
+/* FOOTER */
 .footer {
     margin-top: 80px;
     background: #0a101a;
@@ -279,9 +308,7 @@ body {
     font-size: 14px;
 }
 
-/* ===============================
-   RESPONSIVE
-================================ */
+/* RESPONSIVE */
 @media (max-width: 900px) {
     .search-bar {
         grid-template-columns: 1fr 1fr;

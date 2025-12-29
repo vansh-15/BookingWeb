@@ -1,6 +1,4 @@
-/* ===============================
-   BASE / DESIGN SYSTEM
-================================ */
+/* BASE */
 :root {
     --primary: #00224f;
     --primary-soft: #e7f0ff;
@@ -23,9 +21,7 @@
     --header-height: 72px;
 }
 
-/* ===============================
-   RESET
-================================ */
+/* RESET */
 * {
     margin: 0;
     padding: 0;
@@ -39,9 +35,7 @@ body {
     line-height: 1.6;
 }
 
-/* ===============================
-   HEADER
-================================ */
+/* HEADER */
 .header {
     height: var(--header-height);
     background: var(--primary);
@@ -84,9 +78,7 @@ body {
     background: #ffcc33;
 }
 
-/* ===============================
-   HERO (COMPACT)
-================================ */
+/* HERO */
 .train-hero {
     background: linear-gradient(180deg, #003580 0%, #0051b3 100%);
     padding: 48px 6% 64px;
@@ -104,9 +96,7 @@ body {
     opacity: 0.9;
 }
 
-/* ===============================
-   SEARCH BAR
-================================ */
+/* SEARCH BAR */
 .train-search {
     margin-top: -36px;
 }
@@ -161,10 +151,49 @@ body {
 .search-btn:hover {
     background: #005fa3;
 }
-
 /* ===============================
-   RESULTS HEADER
+   DATE INPUT – TRAIN SEARCH
 ================================ */
+
+.date-input {
+    width: 100%;
+    border: none;
+    background: transparent;
+
+    font-size: 18px;
+    font-weight: 800;
+    color: var(--text-main);
+
+    margin-top: 6px;
+    padding: 0;
+
+    cursor: pointer;
+}
+
+/* Remove default focus outline */
+.date-input:focus {
+    outline: none;
+}
+
+/* Align date field like other search fields */
+.search-field {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* Subtle hover effect */
+.search-field:hover .date-input {
+    color: var(--primary);
+}
+
+/* Make calendar icon subtle (Chrome/Edge) */
+.date-input::-webkit-calendar-picker-indicator {
+    opacity: 0.6;
+    cursor: pointer;
+}
+
+/* RESULTS HEADER */
 .results-header {
     width: 92%;
     max-width: var(--container);
@@ -181,9 +210,7 @@ body {
     margin-top: 4px;
 }
 
-/* ===============================
-   RESULTS LIST
-================================ */
+/* RESULTS LIST */
 .results {
     width: 92%;
     max-width: var(--container);

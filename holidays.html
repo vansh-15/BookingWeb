@@ -46,8 +46,7 @@
 
         <div class="search-field">
             <span>Start Date</span>
-            <h3>20 Jan</h3>
-            <input type="date" class="real-input" name="startDate">
+            <input type="date" class="date-input" name="startDate">
         </div>
 
         <div class="search-field">
@@ -127,9 +126,105 @@
 
 </section>
 
+<!-- customise own itenory -->
+<section class="custom-itinerary-card">
+    <h2>Customize Your Own Itinerary</h2>
+    <p>Choose your preferences and we’ll plan the perfect trip for you.</p>
+
+    <form class="custom-itinerary-form" action="#" method="post">
+
+        <!-- Travel Dates -->
+        <div class="form-group span-2">
+            <label>Travel Dates</label>
+            <div class="date-group">
+                <input type="date" name="startDate" required>
+                <span>to</span>
+                <input type="date" name="endDate" required>
+            </div>  
+        </div>
+
+        <!-- Travellers -->
+        <div class="form-group">
+            <label>Travellers</label>
+            <input type="number" name="travellers" min="1" placeholder="e.g. 2" required>
+        </div>
+
+        <!-- Rooms -->
+        <div class="form-group">
+            <label>Rooms</label>
+            <input type="number" name="rooms" min="1" placeholder="e.g. 1" required>
+        </div>
+
+        <!-- Budget -->
+        <div class="form-group span-2">
+            <label>Budget (per person)</label>
+
+            <div class="budget-group">
+                <input
+                    type="range"
+                    name="budget"
+                    min="5000"
+                    max="200000"
+                    step="1000"
+                    value="50000"
+                    oninput="this.nextElementSibling.value = '₹' + this.value.toLocaleString()">
+
+                <output class="budget-value">₹50,000</output>
+
+                <div class="budget-range">
+                    <span>₹5,000</span>
+                    <span>₹2,00,000+</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Hotel -->
+        <div class="form-group">
+            <label>Hotel Category</label>
+            <select name="hotelCategory" required>
+                <option value="">Select</option>
+                <option>3★ Hotel</option>
+                <option>4★ Hotel</option>
+                <option>5★ Hotel</option>
+            </select>
+        </div>
+
+        <!-- Transport -->
+        <div class="form-group">
+            <label>Transport</label>
+            <select name="transport" required>
+                <option value="">Select</option>
+                <option>Shared Cab</option>
+                <option>Private Cab</option>
+                <option>Self Drive</option>
+            </select>
+        </div>
+
+        <!-- Meals -->
+        <div class="form-group">
+            <label>Meals</label>
+            <select name="meals" required>
+                <option value="">Select</option>
+                <option>Breakfast Only</option>
+                <option>Breakfast + Dinner</option>
+                <option>All Meals</option>
+            </select>
+        </div>
+
+        <!-- Submit -->
+        <div class="form-actions span-2">
+            <button type="submit" class="submit-itinerary-btn">
+                Get Customized Quote
+            </button>
+        </div>
+
+    </form>
+</section>
+
+
 <!-- FOOTER -->
 <footer class="footer">
-    © 2025 247trips. All rights reserved.
+    © 2025 247trips - Powered By Innovaneers Technologies
 </footer>
 
 </body>

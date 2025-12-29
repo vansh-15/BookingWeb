@@ -144,6 +144,25 @@ body {
     font-size: 18px;
     margin-top: 6px;
 }
+.date-input {
+    width: 100%;
+    border: none;
+    background: transparent;
+    font-size: 18px;
+    font-weight: 700;
+    margin-top: 6px;
+    cursor: pointer;
+    color: var(--text-main);
+}
+
+.date-input:focus {
+    outline: none;
+}
+
+.search-field {
+    display: flex;
+    flex-direction: column;
+}
 
 .search-btn {
     background: var(--accent);
@@ -159,9 +178,7 @@ body {
     background: #005fa3;
 }
 
-/* ===============================
-   QUICK FILTERS
-================================ */
+/* QUICK FILTERS */
 .quick-filters {
     width: 92%;
     max-width: var(--container);

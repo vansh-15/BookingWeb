@@ -190,7 +190,7 @@ body {
     grid-template-columns: repeat(4, 1fr) auto;
     border: 1px solid #e5e7eb;
     border-radius: var(--radius-md);
-    overflow: hidden;
+    overflow: visible;
 }
 
 .field {
@@ -219,13 +219,29 @@ body {
     background: #f9fafb;
 }
 
-/* invisible real input (already in your HTML) */
+/* invisible real input  */
 .real-input {
     position: absolute;
     inset: 0;
     opacity: 0;
     cursor: pointer;
 }
+
+/* date input */
+.date-input {
+    width: 100%;
+    border: none;
+    background: transparent;
+    font-size: 18px;
+    font-weight: 700;
+    margin-top: 4px;
+    cursor: pointer;
+}
+
+.date-input:focus {
+    outline: none;
+}
+
 
 /* Search button */
 .search-btn {
